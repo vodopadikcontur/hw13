@@ -2,12 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\cards;
+use App\Models\Card;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\subscriptions>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Subscription>
  */
 class SubscriptionsFactory extends Factory
 {
@@ -19,7 +19,7 @@ class SubscriptionsFactory extends Factory
     public function definition()
     {
         return [
-            'card_id' => cards::factory(),
+            'card_id' => Card::factory(),
             'user_id' => User::factory()
         ];
     }

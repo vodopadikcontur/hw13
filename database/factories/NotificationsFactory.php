@@ -2,11 +2,11 @@
 
 namespace Database\Factories;
 
-use App\Models\cards;
+use App\Models\Card;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\notifications>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Notification>
  */
 class NotificationsFactory extends Factory
 {
@@ -19,7 +19,7 @@ class NotificationsFactory extends Factory
     {
         return [
             'text' => $this->faker->sentence,
-            'card_id' => cards::factory()
+            'card_id' => Card::factory()
         ];
     }
 }

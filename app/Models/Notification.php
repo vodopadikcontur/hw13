@@ -5,17 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class subscriptions extends Model
+class Notification extends Model
 {
     use HasFactory;
 
     public function card()
     {
-        return $this->belongsTo(cards::class);
+        return $this->belongsTo(Card::class);
     }
 
-    public function notification()
+    public function subscriptions()
     {
-        return $this->belongsTo(notifications::class);
+        return $this->belongsToMany(Subscription::class)->withTimestamps();
     }
+
+
+
+
 }

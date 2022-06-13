@@ -44,26 +44,22 @@ class User extends Authenticatable
 
     public function comment()
     {
-        return $this->hasMany(comments::class);
+        return $this->hasMany(Comment::class);
     }
 
     public function card()
     {
-        return $this->hasMany(cards::class);
+        return $this->hasMany(Card::class);
     }
 
     public function subscription()
     {
-        return $this->hasMany(subscriptions::class);
+        return $this->hasMany(Subscription::class);
     }
 
-    public function board()
-    {
-        return $this->hasMany(boards::class);
-    }
 
     public function boards()
     {
-        return $this->belongsTo(boards::class);
+        return $this->belongsToMany(Board::class)->withTimestamps();
     }
 }

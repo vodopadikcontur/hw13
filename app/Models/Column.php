@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class columns extends Model
+class Column extends Model
 {
     use HasFactory;
 
     public function board()
     {
-        return $this->belongsTo(boards::class);
+        return $this->belongsTo(Board::class);
     }
 
     public function card()
     {
-        return $this->hasMany(cards::class);
+        return $this->hasMany(Card::class);
     }
 }

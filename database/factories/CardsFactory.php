@@ -2,12 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\columns;
+use App\Models\Column;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\cards>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Card>
  */
 class CardsFactory extends Factory
 {
@@ -20,7 +20,7 @@ class CardsFactory extends Factory
     {
         return [
             'title' => $this->faker->word,
-            'column_id' => columns::factory(),
+            'column_id' => Column::factory(),
             'author_id' => User::factory(),
             'executor_id' => User::factory(),
             'description' => $this->faker->text

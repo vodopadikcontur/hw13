@@ -2,11 +2,11 @@
 
 namespace Database\Factories;
 
-use App\Models\boards;
+use App\Models\Board;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\columns>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Column>
  */
 class ColumnsFactory extends Factory
 {
@@ -20,7 +20,7 @@ class ColumnsFactory extends Factory
         return [
             'title' => $this->faker->word(),
             'order' => $this->faker->randomDigitNotNull(),
-            'board_id' => boards::factory()
+            'board_id' => Board::factory()
 
         ];
     }

@@ -6,7 +6,7 @@ services:
       context: .docker/php/8.1-apache
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "81:80"
     volumes:
       - .:/var/www/html
 

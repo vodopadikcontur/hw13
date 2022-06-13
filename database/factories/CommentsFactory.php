@@ -2,12 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\cards;
+use App\Models\Card;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\comments>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Comment>
  */
 class CommentsFactory extends Factory
 {
@@ -20,7 +20,7 @@ class CommentsFactory extends Factory
     {
         return [
             'text' => $this->faker->sentence,
-            'card_id' => cards::factory(),
+            'card_id' => Card::factory(),
             'user_id' => User::factory()
         ];
     }
