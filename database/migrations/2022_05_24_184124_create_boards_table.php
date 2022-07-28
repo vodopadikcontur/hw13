@@ -26,6 +26,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('board_id');
             $table->foreignId('user_id');
+            $table->timestamps();
 
             $table->foreign('board_id')->references('id')->on('boards');
             $table->foreign('user_id')->references('id')->on('users');

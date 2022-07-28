@@ -46,7 +46,6 @@ return new class extends Migration
         Schema::table('notification_subscription', function (Blueprint $table) {
             $table->dropForeign('subscription_id');
             $table->dropForeign('notification_id');
-
         });
 
         Schema::dropIfExists('notification_subscription');

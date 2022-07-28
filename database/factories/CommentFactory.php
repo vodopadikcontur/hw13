@@ -2,13 +2,14 @@
 
 namespace Database\Factories;
 
+use App\Models\Card;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Board>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Comment>
  */
-class BoardsFactory extends Factory
+class CommentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,8 +19,9 @@ class BoardsFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->word,
-            'author_id' => User::factory()
+            'text' => $this->faker->sentence,
+            'card_id' => Card::factory(),
+            'user_id' => User::factory()
         ];
     }
 }
